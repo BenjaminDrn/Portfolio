@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- ======================= META ======================= -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ======================= TITLE ======================= -->
+    <title>Portfolio</title>
+    <!-- ======================= LINK ======================= -->
+    <link rel="stylesheet" href="asset/style.css">
+    <link rel="icon" href="IMG/icon.png" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- ========================================= HEADER / NAVIGATION BAR ========================================= -->
+
+    <header id="header">
+        <nav class="navbar">
+
+            <div class="navbar__brand">
+                <h1>Benjamin.drn</h1>
+            </div>
+
+            <div class="navbar__toggle_menu" id="toggle-menu">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <!-- Liste des sections de navigation -->
+            <ul class="navbar__list">
+                <!-- ======================== ACCUEIL / HOME ======================== -->
+                <li class="navbar__item">
+                    <a href="#home" class="active navbar__link ">
+                        <p class="navbarLink__name">Accueil</p>
+                        <i class='navbarLink__icon bx bx-home'></i>
+                    </a>
+                </li>
+                <!-- ======================== À PROPOS - COMPÉTENCES / ABOUT ME ======================== -->
+                <li class="navbar__item">
+                    <a href="#home" class="navbar__link">
+                        <p class="navbarLink__name">À Propos</p>
+                        <i class='navbarLink__icon bx bx-user'></i>
+                    </a>
+                </li>
+                <!-- ======================== PROJETS / PROJECTS ======================== -->
+                <li class="navbar__item">
+                    <a href="#home" class="navbar__link">
+                        <p class="navbarLink__name">Projets</p>
+                        <i class='navbarLink__icon bx bx-code-alt'></i>
+                    </a>
+                </li>
+                <!-- ======================== CONTACT  ======================== -->
+                <li class="navbar__item">
+                    <a href="#home" class="navbar__link">
+                        <p class="navbarLink__name">Contact</p>
+                        <i class='navbarLink__icon bx bx-envelope'></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Liste des réseaux sociaux -->
+            <ul class="navbar__list social">
+                <!-- Linkedin -->
+                <li class="navbar__item">
+                    <a href="#" class="navbar__social_link"><i class='bx bxl-linkedin'></i></a>
+                </li>
+                <!-- Instagram -->
+                <li class="navbar__item">
+                    <a href="#" class="navbar__social_link"><i class='bx bxl-instagram'></i></a>
+                </li>
+                <!-- Youtube -->
+                <li class="navbar__item">
+                    <a href="#" class="navbar__social_link"><i class='bx bxl-youtube'></i></a>
+                </li>
+                <!-- Git Hub -->
+                <li class="navbar__item">
+                    <a href="#" class="navbar__social_link"><i class='bx bxl-github'></i></a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- Background quand le menu est ouvert -->
+    <div class="bgOpenMenu"></div>
+
+    <!-- ========================================= MAIN ========================================= -->
+
+    <main>
+
+        <!-- ========================================= SECTION 1 : ACCEUIL / HOME ========================================= -->
+        <section id="home">
+
+            <div class="home__bg_text">
+                <h1>Bienvenue</h1>
+            </div>
+
+            <div class="home__title_presentation">
+                <h1>Salut !</h1>
+                <h1>Je m'appelle Benjamin.</h1>
+                <h1>Je suis Développeur web.</h1>
+                <h3>Développeur Front-end junior</h3>
+            </div>
+
+            <a href="#contact" class="home__btn_contact">
+                <button>contactez moi</button>
+            </a>
+
+        </section>
+
+        <!-- ========================================= SECTION 2 : À PROPOS / ABOUT ME ========================================= -->
+        <section id="aboutMe">
+
+            <div class="aboutMe__bg_text">
+                <h1>Portfolio</h1>
+            </div>
+
+            <div class="aboutMe_presentation">
+                <h2>Présentation</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolore debitis mollitia saepe sapiente unde doloremque aspernatur facilis doloribus minus molestiae ad, sit nihil. Omnis distinctio eos incidunt ipsa nemo.</p>
+
+                <a href="#" class="aboutMe__btn_git">
+                    <button>
+                        <span>Profil Github</span>
+                        <i class='bx bxl-github'></i>
+                    </button>
+                </a>
+
+            </div>
+
+            <div class="aboutMe__langages">
+                <div class="langage__title">
+                    <p>Langages</p>
+                </div>
+                <ul>
+                    <!-- HTML -->
+                    <li>
+                        <i class='bx bxl-html5'></i>
+                        <div class="langage__loadBar"></div>
+                    </li>
+                    <!-- CSS -->
+                    <li>
+                        <i class='bx bxl-css3'></i>
+                        <div class="langage__loadBar"></div>
+                    </li>
+                    <!-- JS -->
+                    <li>
+                        <i class='bx bxl-javascript'></i>
+                        <div class="langage__loadBar"></div>
+                    </li>
+                    <!-- JQUERY -->
+                    <li>
+                        <i class='bx bxl-jquery'></i>
+                        <div class="langage__loadBar"></div>
+                    </li>
+                    <!-- BOOTSTRAP -->
+                    <li>
+                        <i class='bx bxl-bootstrap'></i>
+                        <div class="langage__loadBar"></div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================= SECTION 3 : PROJETS / PROJECTS ========================================= -->
+        <secion id="projects">
+
+            <div class="projects__bg_text">
+                <h1>Projets</h1>
+            </div>
+
+            <div class="projects__container">
+                <div class="project">
+                    <img src="IMG/format-logo.png" alt="">
+                </div>
+                <div class="project">
+                    <img src="IMG/format-logo.png" alt="">
+                </div>
+                <div class="project">
+                    <img src="IMG/format-logo.png" alt="">
+                </div>
+                <div class="project">
+                    <img src="IMG/format-logo.png" alt="">
+                </div>
+                <div class="project">
+                    <img src="IMG/format-logo.png" alt="">
+                </div>
+                <div class="project">
+                    <img src="IMG/format-logo.png" alt="">
+                </div>
+                <div class="project">
+                    <img src="IMG/format-logo.png" alt="">
+                </div>
+                <div class="project">
+                    <img src="IMG/format-logo.png" alt="">
+                </div>
+                <div class="project">
+                    <img src="IMG/format-logo.png" alt="">
+                </div>
+                <div class="project">
+                    <div class="circle">
+                        <p>voir plus de projets</p>
+                    </div>
+                </div>
+            </div>
+
+        </secion>
+
+        <!-- ========================================= SECTION 4 : CONTACT ========================================= -->
+        <section>
+            <div class="contact__bg_text">
+                <h1>Portfolio</h1>
+                <h2>Benjamin.drn</h2>
+                <p>Développeur Front-end junior</p>
+            </div>
+
+            <div class="contact__infos">
+
+            </div>
+
+            <form method="get" class="contact__form" autocomplete="off">
+                <h2>Contactez moi</h2>
+                <hr>
+                <input type="text" id="" name="" placeholder="" required>
+                <input type="email" id="" name="" placeholder="" required>
+                <textarea name="" id="" placeholder="" required></textarea>
+                <input type="submit" value="ENVOYER">
+            </form>
+
+        </section>
+
+
+    </main>
+
+    <!-- ========================================= FOOTER ========================================= -->
+    <footer id="footer">
+        <p>© 2021 Copyright Benjamin.drn</p>
+    </footer>
+
+
+    <!-- ========================================= SCRIPTS ========================================= -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="asset/main.js"></script>
+
+</body>
+
+</html>

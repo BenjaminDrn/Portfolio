@@ -1,0 +1,603 @@
+/* ======================================== FONTS GOOGLE ======================================== */
+
+
+/*ROBOTO THIN / REGULAR / MEDIUM / BOLD*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+
+/* ======================================== VARIABLES CSS ======================================== */
+
+:root {
+    /* ============ hauteur header ============*/
+    --nav-width: 80px;
+    /* taille Eléments */
+    --Projects-box: calc(100% / 5 - 20px);
+    /* ============ Colors ============*/
+    --first-color: #ffffff;
+    --second-color: #121212;
+    --third-color: #161616;
+    --fourth-color: #212121;
+    --fifth-color: #323232;
+    --sixth-color: #5968be;
+    --first-linear-gradient: linear-gradient(45deg, #683db1, #ff699b);
+    --second-linear-gradient: linear-gradient(45deg, #1ab3ff, #0bf8b7);
+    /* ============ Z-index ============*/
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    /* ============ Font-size ============*/
+    --f-size-Text: 13px;
+    --f-size-Text-Bg: 40px;
+    --f-size-h1: 25px;
+    --f-size-h2: 20px;
+    --f-size-h3: 15px;
+    /* ============ Font-size Icons============*/
+    --f-size-Icons: 20px;
+    --f-size-menu-btn: 30px;
+    /* ============ Font-Family ============*/
+    --f-family: 'roboto', sans-serif;
+    /* ============ Transition ============*/
+    --basic-transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+
+/* ======================================== GÉNÉRAL ======================================== */
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--f-family);
+    font-size: var(--f-size-Text);
+    background: var(--fourth-color);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    border: none;
+}
+
+main {
+    margin-top: var(--nav-width);
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        width: calc(100% - var(--nav-width));
+        margin-top: 0;
+        margin-left: var(--nav-width);
+    }
+}
+
+
+/* Background quand le menu est ouvert */
+
+
+/* .bgOpenMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--second-color);
+    opacity: 0.6;
+} */
+
+
+/* ======================================== NAV BAR ======================================== */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-width);
+    background: var(--second-color);
+    z-index: var(--z-fixed);
+}
+
+#header .navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ===================> Brand */
+
+#header .navbar .navbar__brand {
+    height: var(--nav-width);
+    display: flex;
+    align-items: center;
+}
+
+#header .navbar .navbar__brand h1 {
+    padding: 25px;
+    font-weight: 100;
+    color: var(--first-color);
+    opacity: 0.8;
+}
+
+
+/* ===================> Menu Icon */
+
+#header .navbar .navbar__toggle_menu .bx {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    font-size: var(--f-size-menu-btn);
+    color: var(--first-color);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+/* ===================> Section List */
+
+#header .navbar .navbar__list {
+    position: absolute;
+    top: -350px;
+    /*var(--nav-width)*/
+    left: 0;
+    width: 100%;
+    background: var(--third-color);
+    transition: var(--basic-transition);
+}
+
+#header .navbar .navbar__list .navbar__item {
+    position: relative;
+    border-bottom: 1.5px solid var(--fourth-color);
+}
+
+#header .navbar .navbar__list .navbar__item .navbar__link {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+
+#header .navbar .navbar__list .navbar__item .navbar__link .navbarLink__name {
+    padding: 25px;
+    color: var(--first-color);
+    opacity: 0.8;
+}
+
+#header .navbar .navbar__list .navbar__item .navbar__link .navbarLink__icon {
+    display: none;
+}
+
+
+/* ===================> Social List */
+
+#header .navbar .social {
+    display: none;
+}
+
+
+/* ===================> Section active */
+
+#header .navbar .navbar__list .navbar__item .active .navbarLink__name {
+    color: var(--sixth-color);
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    /* ===================> Menu Icon */
+    #header .navbar .navbar__toggle_menu .bx {
+        display: none;
+    }
+    /* ===================> Section list */
+    #header .navbar .navbar__list {
+        position: inherit;
+        display: flex;
+        align-items: center;
+        width: auto;
+        background: none;
+    }
+    #header .navbar .navbar__list .navbar__item {
+        border: none;
+    }
+    #header .navbar .navbar__list .navbar__item .navbar__link {
+        font-size: 15px;
+    }
+    #header .navbar .navbar__list .navbar__item:nth-child(4) .navbar__link .navbarLink__name {
+        padding: 9px 30px;
+        margin-right: 25px;
+        border-radius: 30px;
+        background: var(--sixth-color);
+        box-shadow: 0px 5px 20px -7px rgb(103, 120, 216);
+        transition: var(--basic-transition);
+    }
+    /* ===================> Social List */
+    #header .navbar .social {
+        display: none;
+    }
+    /* ===================> Section active */
+    #header .navbar .navbar__list .navbar__item .active .navbarLink__name::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: calc(100% - 50px);
+        height: 2px;
+        padding: 1px;
+        margin: 0 25px;
+        background-color: var(--sixth-color);
+    }
+}
+
+
+/* @media screen and (min-width: 992px) {} */
+
+@media screen and (min-width: 1200px) {
+    #header {
+        left: -200px;
+        width: calc(var(--nav-width) + 200px);
+        height: 100vh;
+        background: var(--third-color);
+    }
+    #header .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: var(--nav-width);
+        height: 100vh;
+        background: var(--second-color);
+        float: right;
+    }
+    /* ===================> Brand */
+    #header .navbar .navbar__brand {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        text-align: center;
+        display: block;
+        align-items: inherit;
+        height: auto;
+    }
+    #header .navbar .navbar__brand h1 {
+        background: var(--second-color);
+    }
+    /* ===================> Menu Icon */
+    #header .navbar .navbar__toggle_menu .bx {
+        display: block;
+    }
+    /* ===================> Section List */
+    #header .navbar .navbar__list {
+        display: block;
+        align-items: inherit;
+        position: inherit;
+    }
+    #header .navbar .navbar__list .navbar__item {
+        position: relative;
+        left: -200px;
+        display: block;
+        width: 280px;
+    }
+    #header .navbar .navbar__list .navbar__item .navbar__link {
+        display: flex;
+        align-items: center;
+    }
+    #header .navbar .navbar__list .navbar__item .navbar__link .navbarLink__name {
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+    }
+    #header .navbar .navbar__list .navbar__item:nth-child(4) .navbar__link .navbarLink__name {
+        margin-right: 0;
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+        transition: none;
+    }
+    #header .navbar .navbar__list .navbar__item .navbar__link .navbarLink__icon {
+        display: block;
+        transition: var(--basic-transition);
+    }
+    #header .navbar .navbar__list .navbar__item .navbar__link .navbarLink__icon:hover {
+        color: var(--sixth-color);
+    }
+    #header .navbar .navbar__list .navbar__item .navbar__link .bx {
+        padding: 15px;
+        margin: 0 auto;
+        font-size: var(--f-size-Icons);
+        color: var(--first-color);
+        opacity: 0.8;
+    }
+    /* ===================> Social List */
+    #header .navbar .social {
+        display: block;
+        margin: 15px 0;
+    }
+    #header .navbar .social .navbar__item {
+        width: 80px;
+        padding: 8px 0;
+        left: 0;
+    }
+    #header .navbar .social .navbar__item .navbar__social_link {
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        color: var(--first-color);
+        transition: var(--basic-transition);
+    }
+    #header .navbar .social .navbar__item .navbar__social_link:hover {
+        color: var(--sixth-color);
+    }
+    /* ===================> Section active */
+    #header .navbar .navbar__list .navbar__item .active .navbarLink__name::after {
+        content: none;
+    }
+    #header .navbar .navbar__list .navbar__item .active .navbarLink__icon {
+        color: var(--sixth-color);
+    }
+}
+
+
+/* ======================================== SECTION 1 : ACCEUIL / HOME ======================================== */
+
+#home {
+    padding: 100px 30px;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+#home .home__bg_text {
+    position: absolute;
+    left: 20px;
+    font-size: var(--f-size-Text-Bg);
+    color: var(--first-color);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+#home .home__title_presentation h1 {
+    font-size: var(--f-size-h1);
+    opacity: 0.9;
+    color: var(--first-color);
+}
+
+#home .home__title_presentation h3 {
+    margin: 20px 0 60px 0;
+    font-size: var(--f-size-h3);
+    font-weight: 400;
+    opacity: 0.4;
+    color: var(--first-color);
+}
+
+#home .home__btn_contact button {
+    padding: 18px 35px;
+    text-transform: uppercase;
+    color: var(--first-color);
+    background: var(--first-linear-gradient);
+    border-radius: 3px;
+    box-shadow: 0px 8px 30px -10px #C153B5;
+}
+
+
+/* ======================================== SECTION 2 : PRÉSENTATION / ABOUT ME ======================================== */
+
+#aboutMe {
+    width: 100%;
+    background: var(--third-color);
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+#aboutMe .aboutMe__bg_text {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--f-size-Text-Bg);
+    color: var(--first-color);
+    opacity: 0.1;
+}
+
+#aboutMe .aboutMe_presentation {
+    position: relative;
+    padding: 60px 30px;
+    z-index: 20;
+    color: var(--first-color);
+}
+
+#aboutMe .aboutMe_presentation h2 {
+    font-size: 30px;
+}
+
+#aboutMe .aboutMe_presentation hr {
+    width: 110px;
+    height: 3px;
+    margin: 20px auto;
+    border: none;
+    background: var(--sixth-color);
+}
+
+#aboutMe .aboutMe_presentation p {
+    text-align: justify;
+    margin-bottom: 60px;
+    opacity: 0.67;
+    line-height: 25px;
+}
+
+#aboutMe .aboutMe__btn_git {
+    display: flex;
+    justify-content: center;
+}
+
+#aboutMe .aboutMe__btn_git button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 35px;
+    color: var(--second-color);
+    background: var(--first-color);
+    border-radius: 3px;
+    box-shadow: 0px 8px 20px -10px var(--first-color);
+}
+
+#aboutMe .aboutMe__btn_git button span {
+    font-size: var(--f-size-Text);
+}
+
+#aboutMe .aboutMe__btn_git button .bx {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#aboutMe .aboutMe__langages {
+    padding: 40px 30px;
+    background: var(--first-color);
+    text-align: left;
+}
+
+#aboutMe .aboutMe__langages .langage__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--third-color);
+}
+
+#aboutMe .aboutMe__langages ul li {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#aboutMe .aboutMe__langages ul li .bx {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: var(--third-color);
+}
+
+#aboutMe .aboutMe__langages ul li .langage__loadBar {
+    width: calc(100% - 70px);
+    height: 15px;
+    position: relative;
+    background: #dcdcdc;
+}
+
+#aboutMe .aboutMe__langages ul li .langage__loadBar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    background: var(--sixth-color);
+}
+
+#aboutMe .aboutMe__langages ul li:nth-child(1) .langage__loadBar::after {
+    width: 95%;
+}
+
+#aboutMe .aboutMe__langages ul li:nth-child(2) .langage__loadBar::after {
+    width: 80%;
+}
+
+#aboutMe .aboutMe__langages ul li:nth-child(3) .langage__loadBar::after {
+    width: 60%;
+}
+
+#aboutMe .aboutMe__langages ul li:nth-child(4) .langage__loadBar::after {
+    width: 40%;
+}
+
+#aboutMe .aboutMe__langages ul li:nth-child(5) .langage__loadBar::after {
+    width: 60%;
+}
+
+
+/* ======================================== SECTION 3 : PROJETS / PROJECTS ======================================== */
+
+#projects {
+    padding: 100px 0;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+#projects .projects__bg_text {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    font-size: var(--f-size-Text-Bg);
+    color: var(--first-color);
+    opacity: 0.1;
+}
+
+#projects .projects__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#projects .projects__container .project {
+    background: var(--first-color);
+    width: 50%;
+    padding: 50% 0 0 0;
+    position: relative;
+    /*temporaire*/
+    border: 1px solid black;
+}
+
+#projects .projects__container .project img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#projects .projects__container .project:nth-last-child(1) {
+    background: var(--second-linear-gradient);
+    color: var(--first-color);
+}
+
+#projects .projects__container .project .circle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+
+/* ======================================== SECTION 3 : PROJETS / PROJECTS ======================================== */
